@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+}
+
+.slider {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    position: relative;
+}
+
+.slider .slides {
+    width: 80%;
+    height: 100%;
+
+}
+.slider .slides .slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+.slider .slides .slide.active {
+    display: block;
+}
+
+.slider .slides .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slides .slide .texts {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    color: white;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider .thumbnails {
+    width: 20%;
+    height: 100%;
+}
+
+.slider .thumbnails .thumb {
+    min-height: 1%;
+    width: 100%;
+    filter: brightness(40%);
+    cursor: pointer;
+}
+
+
+.slider .thumbnails .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .thumbnails .thumb.active {
+    filter: brightness(100%);
+    border: 1px solid white;
+}
+
+
+.slider .controls > span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: rgba(255, 255, 255, .4);
+
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .2s ease-in-out;
+}
+
+
+.previous {
+    top: 5px;
+}
+
+.next {
+    bottom: 5px;
+}
